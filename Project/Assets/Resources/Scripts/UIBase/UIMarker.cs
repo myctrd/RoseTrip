@@ -64,7 +64,7 @@ public class UIMarker : UIBase
         if (transform.GetComponent<Image>() != null)
         {
             var image = transform.GetComponent<Image>();
-            image.sprite = UIResourceLoader.m_instance.Load<Sprite>("Textures/" + sprite + ".png");
+            image.sprite = UIResourceLoader.m_instance.Load<Sprite>("Textures/" + sprite);
         }
     }
 

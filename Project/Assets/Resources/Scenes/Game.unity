@@ -2103,7 +2103,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9618ee17bf730a246b0e08ea05c5bf87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_state: 0
   line: 0
   col: 0
 --- !u!1001 &315755601
@@ -3062,7 +3061,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1844244565}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -3962,6 +3961,7 @@ MonoBehaviour:
   - {fileID: 1347991578}
   tileWidth: 100
   role: {fileID: 313933694}
+  roleMove: 0
 --- !u!1001 &537301470
 Prefab:
   m_ObjectHideFlags: 0

@@ -1,10 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System;
-using System.Collections;
-using System.IO;
-using UnityEngine.UI;
 
 public class UIResourceLoader : ResourceLoaderBase {
 	
@@ -30,7 +25,7 @@ public class UIResourceLoader : ResourceLoaderBase {
         else
         {
             //missing cache
-            obj = this.Load<GameObject>("UIPrefabs/UIPanels/" + name + ".prefab");
+            obj = this.Load<GameObject>("UIPrefabs/UIPanels/" + name);
             __cache[name] = obj;
         }
 
@@ -58,7 +53,7 @@ public class UIResourceLoader : ResourceLoaderBase {
     {
         // find in cache
         GameObject obj = null;
-		obj = this.Load<GameObject>("UIPrefabs/UIComponents/" + name + ".prefab");
+		obj = this.Load<GameObject>("UIPrefabs/UIComponents/" + name);
 
         if (obj != null)
         {
@@ -74,7 +69,7 @@ public class UIResourceLoader : ResourceLoaderBase {
         // find in cache
         string name = "scene_" + i.ToString();
         GameObject obj = null;
-        obj = this.Load<GameObject>("UIPrefabs/UIScenes/" + name + ".prefab");
+        obj = this.Load<GameObject>("UIPrefabs/UIScenes/" + name);
 
         if (obj != null)
         {

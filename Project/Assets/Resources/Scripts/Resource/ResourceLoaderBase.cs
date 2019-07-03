@@ -45,13 +45,14 @@ public class ResourceLoaderBase : MonoBehaviour {
 
     public Sprite LoadItemSprite(int itemId)
     {
-        return Load<Sprite>("Textures/Item/item_" + itemId.ToString() + ".png");
+        return Load<Sprite>("Textures/Item/item_" + itemId.ToString());
     }
 	
 	public T Load<T>(string _asset_name) where T : UnityEngine.Object
     {
         string asset = AssetPreName + _asset_name;
-        var ret = UnityEditor.AssetDatabase.LoadAssetAtPath<T>(asset);
+        var ret = Resources.Load(_asset_name) as T;
+        //var ret = UnityEditor.AssetDatabase.LoadAssetAtPath<T>(asset);
         if (ret == null)
         {
             Debug.LogError("can not find asset " + asset);
